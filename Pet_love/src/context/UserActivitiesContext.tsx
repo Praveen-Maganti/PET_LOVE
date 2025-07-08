@@ -4,7 +4,7 @@ import ActivityErrorModal from '../components/ActivityErrorModal';
 import { UserActivity } from '../data/mockActivities';
 import { useAuth } from './AuthContext';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://pet-love-backend.onrender.com';
 
 interface UserActivitiesContextType {
   activities: UserActivity[];
