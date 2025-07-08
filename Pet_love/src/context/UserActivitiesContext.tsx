@@ -4,7 +4,7 @@ import ActivityErrorModal from '../components/ActivityErrorModal';
 import { UserActivity } from '../data/mockActivities';
 import { useAuth } from './AuthContext';
 
-const API_BASE = 'https://pet-love-backend.onrender.com';
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://pet-love-backend.onrender.com/api';
 
 interface UserActivitiesContextType {
   activities: UserActivity[];
@@ -294,3 +294,4 @@ export const UserActivitiesProvider: React.FC<{ children: ReactNode }> = ({ chil
     </>
   );
 };
+
