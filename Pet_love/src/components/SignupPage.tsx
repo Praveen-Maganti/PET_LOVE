@@ -62,7 +62,7 @@ const SignupPage: React.FC<SignupPageProps> = ({ onBack, onShowLogin }) => {
     }
 
     try {
-      const API_BASE = import.meta.env.VITE_API_BASE || 'https://pet-love-backend.onrender.com/api';
+      const API_BASE = import.meta.env.VITE_API_BASE || 'https://pet-love-backend.onrender.com/api/users';
       const res = await fetch(`${API_BASE}/users`,{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
