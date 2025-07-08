@@ -30,7 +30,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ onBack, onShowSignup, onLoginSucc
     }
 
     try {
-      const res = await fetch('/api/users/login', {
+      const API_BASE = import.meta.env.VITE_API_BASE || 'https://pet-love-backend.onrender.com/api';
+      const res = await fetch(`${API_BASE}/users/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
